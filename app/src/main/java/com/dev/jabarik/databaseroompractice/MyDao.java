@@ -1,6 +1,7 @@
 package com.dev.jabarik.databaseroompractice;
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
@@ -14,5 +15,8 @@ public interface MyDao {
 
     @Query("select * from user")
     public List<User> getUsers();
+
+    @Delete
+    public void deleteUser(User user);
 
 }
