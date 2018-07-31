@@ -50,12 +50,9 @@ public class AddUserFragment extends Fragment {
                 user.setEmail(useremail);
 
 
-                AsyncTask.execute(new Runnable() {
-                    @Override
-                    public void run() {
+
                         MainActivity.myAppDatabase.myDao().addUser(user);
-                    }
-                });
+
                 Toast.makeText(getActivity(), "User Added", Toast.LENGTH_SHORT).show();
 
                 UserId.setText("");
